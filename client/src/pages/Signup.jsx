@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import OAuth from '../components/OAuth';
 
 const Signup = () => {
   const [formData, setFormData] = useState({});
@@ -27,6 +28,7 @@ const Signup = () => {
         setError(true);
         return;
       }
+      // eslint-disable-next-line no-unused-vars
     } catch (error) {
       setLoading(false);
       setError(true);
@@ -63,6 +65,7 @@ const Signup = () => {
         >
           {loading ? 'Loading' : 'Sign up'}
         </button>
+        <OAuth />
       </form>
       <div className="flex gap-2 mt-5">
         <p>Have an account?</p>
