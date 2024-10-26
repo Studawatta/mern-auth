@@ -1,4 +1,5 @@
 const Profile = () => {
+  console.log('jjjj');
   return <div>Profile</div>;
 };
 
