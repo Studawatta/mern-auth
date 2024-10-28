@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import userRoutes from './routes/user.route.js';
 import authRoutes from './routes/auth.route.js';
 import { errorHandler } from './middlewares/error.js';
+import cookieParser from 'cookie-parser';
 
 mongoose
   .connect(process.env.MONGO)
@@ -16,6 +17,8 @@ mongoose
 const app = express();
 
 app.use(express.json());
+
+app.use(cookieParser());
 
 app.use('/api/user', userRoutes);
 app.use('/api/auth', authRoutes);
