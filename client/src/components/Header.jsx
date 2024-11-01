@@ -22,7 +22,7 @@ const Header = () => {
               <img
                 src={currentUser.profilePicture}
                 alt="profile_picture"
-                className="h-7 w-7 rounded-full object-cover"
+                className="h-7 w-7 rounded-full object-cover "
               />
             ) : (
               <li>Sign In</li>
